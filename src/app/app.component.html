@@ -1,17 +1,56 @@
 <nb-layout>
 
-  <nb-layout-header fixed style="background-color: darkkhaki;">
-    <button nbButton style="position:absolute" size="medium">medium</button>
+  <nb-layout-header fixed style="background-color: rgb(101, 75, 143);">
+
+
+    <a style="color: white;" [routerLink]="['/curso']" routerLinkActive="router-link-active" >Menu</a>
+
+    <nb-search  type="rotate-layout" >Pesquisa</nb-search>
+    <!-- <button nbButton shape="round" size="small" status="success">Round Small</button> -->
+    <!-- <button  nbButton (click)="criar()"style="position:absolute" size="medium">medium</button> -->
   </nb-layout-header>
-
-  <nb-layout-column>
-
-    <p>carai viado</p>
+  
+  <nb-layout-column class="colored-column-basic">
     
+    <!-- <p *ngIf="!ativo">nada a vê irmao</p> -->
+    <!-- <p *ngIf="ativo" >tudo a ver irmao</p> -->
+
+    <br>
+
+    <!-- <input type="text" (keyup)="key($event)" (keyup.enter)="salvarCampo(campoInput.value)" #campoInput> -->
+
+    <input  [(ngModel)]="produto.descricao" #entrada>
+
+    <button nbButton  (click)="adicionar(entrada.value)" size="medium">Cadastro</button>
+
+    
+    <!-- <p>valor: {{valorSalvo}}</p> -->
+
+    <router-outlet></router-outlet>
+    
+     
+    <table>
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>DESCRICAO</th>
+            <th>PRECO</th>
+        </tr>
+      </thead>
+
+      <thead>
+        <tr *ngFor="let item of listaProdutos; let i = index" #criar #estados>
+            <th>{{ item.id }}</th>
+            <th>{{ item.descricao }}</th>
+            <th>{{ item.preco }}</th>
+        </tr>
+      </thead>
+    </table>    
+
   </nb-layout-column>
 
   <nb-layout-footer fixed>
-  <!-- Insert footer here -->
+    <p>Desenvolvido por © Joao Pedro Peraro</p>
   </nb-layout-footer>
-
+  
 </nb-layout>
