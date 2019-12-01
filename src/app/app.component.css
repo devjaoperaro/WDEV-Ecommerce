@@ -5,3 +5,10 @@ nb-search{
     color: white;
     width: 102px;
 }
+
+.home{
+    position: absolute;
+    top: 28px;
+    left: 85px;
+    color: white;
+}

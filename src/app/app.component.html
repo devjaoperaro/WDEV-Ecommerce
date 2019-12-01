@@ -4,6 +4,7 @@
 
 
     <a style="color: white;" [routerLink]="['/curso']" routerLinkActive="router-link-active" >Menu</a>
+    <a class="home" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
 
     <nb-search  type="rotate-layout" >Pesquisa</nb-search>
     <!-- <button nbButton shape="round" size="small" status="success">Round Small</button> -->
@@ -18,34 +19,8 @@
     <br>
 
     <!-- <input type="text" (keyup)="key($event)" (keyup.enter)="salvarCampo(campoInput.value)" #campoInput> -->
-
-    <input  [(ngModel)]="produto.descricao" #entrada>
-
-    <button nbButton  (click)="adicionar(entrada.value)" size="medium">Cadastro</button>
-
+    <router-outlet></router-outlet> 
     
-    <!-- <p>valor: {{valorSalvo}}</p> -->
-
-    <router-outlet></router-outlet>
-    
-     
-    <table>
-      <thead>
-        <tr>
-            <th>ID</th>
-            <th>DESCRICAO</th>
-            <th>PRECO</th>
-        </tr>
-      </thead>
-
-      <thead>
-        <tr *ngFor="let item of listaProdutos; let i = index" #criar #estados>
-            <th>{{ item.id }}</th>
-            <th>{{ item.descricao }}</th>
-            <th>{{ item.preco }}</th>
-        </tr>
-      </thead>
-    </table>    
 
   </nb-layout-column>
 

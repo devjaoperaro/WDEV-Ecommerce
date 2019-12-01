@@ -11,21 +11,32 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbButtonModule  } from '@nebular/theme';
+import { NbInputModule  } from '@nebular/theme';
 import { NbSearchModule  } from '@nebular/theme';
 import { CursoComponent } from './curso/curso.component';
+import { HomeComponent } from './home/home.component';
+
+
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { InicialComponent } from './inicial/inicial.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CursoComponent
+    CursoComponent,
+    HomeComponent,
+    InicialComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    Ng2SmartTableModule,
     CommonModule,
     BrowserAnimationsModule,
     FormsModule,
+    NbInputModule,
     NbSearchModule, 
     NbButtonModule,
     NbThemeModule.forRoot({ name: 'default' }),

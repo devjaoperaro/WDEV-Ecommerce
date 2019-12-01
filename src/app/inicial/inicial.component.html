@@ -1,0 +1,26 @@
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Alunos</th>
+            <input type="text" nbInput  status="basic" [(ngModel)]="produto.descricao" #entrada placeholder="Default">
+            <!-- <input  [(ngModel)]="produto.descricao" #entrada> -->
+            <button nbButton  (click)="adicionar(entrada.value)" size="medium">Cadastro</button>
+            <!-- <button class="btn1" nbButton (click)="criar()"style="position:absolute" size="medium">Inserir</button> -->
+        </tr>
+    </thead>
+    
+    <thead>
+        <tr *ngFor="let item of listaProdutos; let i = index" #criar #estados>
+            <!-- <th>{{ item.id }}</th> -->
+            <th>{{ item.descricao }}</th>
+            <!-- <th>{{ item.preco }}</th> -->
+        </tr>
+    </thead>
+  
+</table>
+
+
+<button class="botaoBrasil" (click)="MouseEvent()" nbButton [style.backgroundColor]="ar ? 'green' : 'yellow'">vamo Brazil!!</button>

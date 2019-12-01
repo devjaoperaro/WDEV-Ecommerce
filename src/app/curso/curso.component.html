@@ -1,3 +1,24 @@
 
+<input  [(ngModel)]="produto.descricao" #entrada>
+
+<button nbButton  (click)="adicionar(entrada.value)" size="medium">Cadastro</button>
+
+
+<!-- <p>valor: {{valorSalvo}}</p> -->
+
+
+
+ 
+<table>
+  <thead>
+    <tr>
+        <!-- <th>ID</th> -->
+        <th>DESCRICAO</th>
+        <th>PRECO</th>
+    </tr>
+  </thead>
+
+  
+</table>    
 
 <button class="botaoBrasil" (click)="MouseEvent()" nbButton [style.backgroundColor]="ar ? 'green' : 'yellow'">vamo Brazil!!</button>

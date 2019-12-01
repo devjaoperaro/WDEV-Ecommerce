@@ -1,4 +1,4 @@
-import { Produto } from './produto';
+// import { Produto } from './produto';
 import { Component } from '@angular/core';
 // import { NgModule } from '@angular/core';
 
@@ -15,7 +15,7 @@ export class AppComponent {
   valorSalvo: any;
   listaProdutos: any = [];
 
-  produto: Produto = new Produto();
+  
 
   criar(){
     this.ativo = !this.ativo;
@@ -25,10 +25,6 @@ export class AppComponent {
     this.valorSalvo = salvo;
   }
 
-  adicionar(){
-    this.listaProdutos.push(this.produto);
-
-    this.produto = new Produto();      //zerando o input 
-  }
+  
 
 }
